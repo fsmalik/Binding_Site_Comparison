@@ -30,7 +30,7 @@ For now, you will have to check this by hand - sorry.
 
 ACCEPTABLE FORMATS (Maestro - Multiple Sequence Viewer Export):
 
-'.fasta' format ***THIS EXAMPLE HAS 3 COMPILED ALIGNMENTS***
+1. '.fasta' format ***THIS EXAMPLE HAS 3 COMPILED ALIGNMENTS***
 ```
 3ODU_A, TVGLVVMKLRSMTDRDRAASRKQKKATLCPILYAL
 UNIPROT, TVGLVVMKLRSMTDRDRAASRKQKKATLCPILYAL
