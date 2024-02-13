@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for file in *.fasta
+do
+   cat "$file" >> allBS_merged
+   echo >> allBS_merged
+done
