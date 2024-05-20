@@ -2,6 +2,40 @@
 Contains scripts for comparing residues at the binding site in MSA. 
 Malik, F., &amp; Li, Z. (2022). Non-peptide agonists and positive allosteric modulators of glucagon-like peptide-1 receptors: Alternative approaches for treatment of Type 2 diabetes. British Journal of Pharmacology, 179(4), 511–525.
 
+## Compatibility for Release 2022-2
+
+Maestro changed the format which fasta files are exported in. Use ```process_sequences.sh``` to convert it back:
+
+To use this script: ```./process_sequences.sh inputseq.fst outputseq.fst```
+
+This will convert this format:
+```
+>NAME:6X1A.R|CHAIN:R
+AT-SLWE-VQK-RE-E-LL-Y-Y-R-V-K-ALKW-ST-Q-LL-YQ-C-VF-MQ-VA-Y-W
+-K-EDEGCWTRNS-W-IR-I-I-E-FA-M-RGTLRF-LF-EL-T-
+>NAME:sp|P43220|GLP1R_HUMAN Glucagon-like peptide 1 receptor OS=Homo sapiens OX=9606 GN=GLP1R PE=1 SV=2|CHAIN:
+AT-SLWE-VQK-RE-E-LL-Y-Y-R-V-K-ALKW-ST-Q-LL-YQ-C-VF-MQ-VA-Y-W
+-K-EDEGCWTRNS-W-IR-I-I-E-FA-M-RGTLRF-LF-EL-T-
+>NAME:sp|P43220|GLP1R_HUMAN Glucagon-like peptide 1 receptor OS=Homo sapiens OX=9606 GN=GLP1R PE=1 SV=2|CHAIN:
+AT-SLWE-VQK-RE-E-LL-Y-Y-R-V-K-ALKW-ST-Q-LL-YQ-C-VF-MQ-VA-Y-W
+-K-EDEGCWTRNS-W-IR-I-I-E-FA-M-RGTLRF-LF-EL-T-
+```
+
+To this format:
+
+```
+>NAME:6X1A.R|CHAIN:R
+ATSLWEVQKREELLYYRVKALKWSTQLLYQCVFMQVAYWKEDEGCWTRNSWIRIIEFAMRGTLRFLFELT
+
+>NAME:sp|P43220|GLP1R_HUMAN Glucagon-like peptide 1 receptor OS=Homo sapiens OX=9606 GN=GLP1R PE=1 SV=2|CHAIN:
+ATSLWEVQKREELLYYRVKALKWSTQLLYQCVFMQVAYWKEDEGCWTRNSWIRIIEFAMRGTLRFLFELT
+
+>NAME:sp|P43220|GLP1R_HUMAN Glucagon-like peptide 1 receptor OS=Homo sapiens OX=9606 GN=GLP1R PE=1 SV=2|CHAIN:
+ATSLWEVQKREELLYYRVKALKWSTQLLYQCVFMQVAYWKEDEGCWTRNSWIRIIEFAMRGTLRFLFELT
+
+
+```
+## Running The Scripts (Maestro Release 2019)
 1. python_sequence_reader_final.py needs to be executed with the python or python3 command
 ```
 -i --input
