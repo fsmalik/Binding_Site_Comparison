@@ -4,7 +4,9 @@ input_file="$1"
 
 output_file="$2"
 
-rm "$output_file"
+if [ -f $output_file ]; then
+    rm "$output_file"
+fi
 
 first_line=true
 sequence=""
