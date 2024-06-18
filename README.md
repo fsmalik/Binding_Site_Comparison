@@ -44,23 +44,24 @@ ATSLWEVQKREELLYYRVKALKWSTQLLYQCVFMQVAYWKEDEGCWTRNSWIRIIEFAMRGTLRFLFELT
 ```
 
 2. ```./merger``` to execute the merger script
-Merger will compile all alignment files (.fst or .fasta) into one file for the input in the python program.
-Merger must be in the same directory as all alignment files.
-Merger is originally formatted to compile only '.fasta' files in said directory -> in order to compile '.fst' files open merger with any text editor and change .fasta to .fst in line 3.
+3. Merger will compile all alignment files (.fst or .fasta) into one file for the input in the python program.
+4. Merger must be in the same directory as all alignment files.
+5. Merger is originally formatted to compile only '.fasta' files in said directory -> in order to compile '.fst' files open merger with any text editor and change .fasta to .fst in line 3.
 
-3. The ```BS_alignments``` directory contains a set of example alignment files in .fasta format and 'allBS_aligned' is the compiled file you would get if you ran the merger script in this directory.
-The output file is the example output you would get if you ran python seq reader on allBS_merged.
+6. The ```BS_alignments``` directory contains a set of example alignment files in .fasta format and 'allBS_aligned' is the compiled file you would get if you ran the merger script in this directory.
 
-4. The ```conservation_scripts_seqnum_adjustments``` directory contains the code adjustments required when there are more than 3 sequences aligned in a single MSA.
+7. The output file is the example output you would get if you ran ```python_seq_reader.py``` on ```allBS_merged```.
+
+8. The ```conservation_scripts_seqnum_adjustments``` directory contains the code adjustments required when there are more than 3 sequences aligned in a single MSA.
 It is recommended to just use alignments of 3 sequences at a time since there are no instructions on how to implement this code.
 
-5. The python_sequence_reader_final.py can accept two formats (nonsimultaneously... )
+9. The python_sequence_reader_final.py can accept two formats (nonsimultaneously... )
 These formats can seen below -> ```.fst``` format and ```.fasta``` format
 The ```python_sequence_reader_final.py``` script can only accept one argument for input and one argument for output (see usage help ```-h``` for more)
 
-6. Squiggles i.e. '~' or gaps in the sequence are considered non-identical residues in this script.
-This is a simple script, and it does not account for checking adjacent residues for conservation. maybe in the future, but not currently.
-For now, you will have to check this by hand - sorry.
+10. Squiggles i.e. '~' or gaps in the sequence are considered non-identical residues in this script.
+This is a simple script, and it does not account for checking adjacent residues for conservation.
+(Alternatively, you can check this by hand.)
 
 ACCEPTABLE FORMATS (Maestro - Multiple Sequence Viewer Export):
 
@@ -111,3 +112,5 @@ KFHRPMYYFNFSLAIERYITMLKMHNSNRLLIACIIYLVRTRSRRLTFRKNIASSSKSLLLERAR
 KFHNRMYFFNCSLAIERHLTMIKMYDNRRVLIMCIIYLVKSSSRKVANHNN~~~~SRSMLLERAR
 
 ```
+
+11. To run the Comparison: ```python3 python_seq_reader.py -i allBS_merged -o NIRs.tsv```; ```NIRs.tsv``` will contain the results with number of non-identical residues.
