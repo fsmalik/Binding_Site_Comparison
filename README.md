@@ -1,6 +1,6 @@
 # Binding_Site_Comparison
 Contains scripts for comparing residues at the binding site in MSA. 
-Malik, F., &amp; Li, Z. (2022). Non-peptide agonists and positive allosteric modulators of glucagon-like peptide-1 receptors: Alternative approaches for treatment of Type 2 diabetes. British Journal of Pharmacology, 179(4), 511–525.
+Malik F, Li Z. Is there a common allosteric binding site for G-protein coupled receptors? J Comput Aided Mol Des. 2022 Jun;36(6):405-413. doi: 10.1007/s10822-022-00454-5. Epub 2022 May 4. PMID: 35507106; PMCID: PMC10150935.
 
 ## Compatibility for Release 2022-2
 
